@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&family=Roboto+Mono:wght@300&family=Shrikhand&family=Space+Mono&family=Spline+Sans+Mono&display=swap');
+
+/*!Fuentes*/
+/* Fuentes:
+* font-family: 'Montserrat', sans-serif;
+* font-family: 'Pacifico', cursive;
+* font-family: 'Roboto Mono', monospace;
+* font-family: 'Shrikhand', cursive;
+* font-family: 'Space Mono', monospace;
+* font-family: 'Spline Sans Mono', monospace;
+
+*font-family: 'Bebas Neue', sans-serif;
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*! MARVEL SCREEN */
+/* #region marvelScreen*/
+
+.marvelScreen{
+    background: radial-gradient(#6b0000, #111);
+
+    /* min-height: 300px; */
+    /* height: 600px; */
+    /* max-height: 100vh; */
+    height: 100vh;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nameContainer{
+    color: #eeeeee;
+    text-align: center;
+}
+.nameContainer h1{
+    font-size: 200px;
+    line-height: 70%;
+    border-bottom: 5px #fff solid;
+}
+
+.surnameContainer{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+/* #endregion marvelScreen*/
+
+/*! CUBO RUBIK LOGO SCREEN*/
+/* #region cuboRubikScreen*/
+
+.cuboRubikLogoScreen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: radial-gradient(#112D4E, #111);
+
+    border-bottom: solid 4px #fdcb6e;
+}
+.contentContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.cuboRubikLogo{
+    position: relative;
+    left: -10px;
+
+    width: 300px;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1px;
+
+    margin: 10px;
+
+    transform: rotate(-15deg);
+}
+.cuadrado{
+    border: solid 4px #111;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+
+.cuadrado:nth-child(1),
+.cuadrado:nth-child(6){
+    background-color: #0984e3;
+}
+.cuadrado:nth-child(3),
+.cuadrado:nth-child(7){
+    background-color: #d63031;
+}
+.cuadrado:nth-child(2),
+.cuadrado:nth-child(9){
+    background-color: #00b894;
+}
+.cuadrado:nth-child(4),
+.cuadrado:nth-child(8){
+    background-color: #fdcb6e;
+}
+.cuadrado:nth-child(5){
+    background-color: #e17055;
+}
+
+.cuadrado:has(p){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cuadrado p{
+    color: #111;
+    font-size: 50px;
+    font-family: 'Spline Sans Mono', monospace;
+}
+
+
+.texto p{
+    font-family: 'Montserrat', sans-serif;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 100px;
+}
+
+/* #endregion cuboRubikScreen*/
+
+.infoContainer{
+    height: 100vh;
+    width: 100%;
+    background-color: #112D4E;
+}
+
+
+
+/*! DISPLAYS EN JAVASCRIPT*/
+/* #region displays&javascript*/
+
+.displayNone{
+    display: none;
+}
+.displayYes{
+    display: flex;
+}
+.changeMode{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #111;
+    border: 2px solid #eeeeee;
+    color: #eeeeee;
+    cursor: pointer;
+}
+
+/* #endregion displays&javascript*/
+
+
