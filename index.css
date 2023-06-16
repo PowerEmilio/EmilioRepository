@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&family=Roboto+Mono:wght@300&family=Shrikhand&family=Space+Mono&family=Spline+Sans+Mono&display=swap');
 
 /*!Fuentes*/
@@ -9,10 +8,20 @@
 * font-family: 'Shrikhand', cursive;
 * font-family: 'Space Mono', monospace;
 * font-family: 'Spline Sans Mono', monospace;
-
-*font-family: 'Bebas Neue', sans-serif;
 */
 
+:root{
+
+    --cuboRubikAzul: #0984e3;
+    --cuboRubikRojo: #d63031;
+    --cuboRubikVerde: #00b894;
+    --cuboRubikAmarillo: #fdcb6e;
+    --cuboRubikNaranja: #e17055;
+
+    --colorFondoPrimario: #112D4E;
+    --colorFondoSecundario: #0c1a29;
+
+}
 
 *{
     margin: 0;
@@ -20,41 +29,7 @@
     box-sizing: border-box;
 }
 
-/*! MARVEL SCREEN */
-/* #region marvelScreen*/
 
-.marvelScreen{
-    background: radial-gradient(#6b0000, #111);
-
-    /* min-height: 300px; */
-    /* height: 600px; */
-    /* max-height: 100vh; */
-    height: 100vh;
-
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nameContainer{
-    color: #eeeeee;
-    text-align: center;
-}
-.nameContainer h1{
-    font-size: 200px;
-    line-height: 70%;
-    border-bottom: 5px #fff solid;
-}
-
-.surnameContainer{
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
-    
-}
-
-/* #endregion marvelScreen*/
 
 /*! CUBO RUBIK LOGO SCREEN*/
 /* #region cuboRubikScreen*/
@@ -67,9 +42,9 @@
     align-items: center;
     flex-direction: column;
 
-    background: radial-gradient(#112D4E, #111);
+    background: radial-gradient(var(--colorFondoPrimario), #111);
 
-    border-bottom: solid 4px #fdcb6e;
+    border-bottom: solid 4px var(--cuboRubikAmarillo);
 }
 .contentContainer{
     width: 100%;
@@ -108,22 +83,22 @@
 
 .cuadrado:nth-child(1),
 .cuadrado:nth-child(6){
-    background-color: #0984e3;
+    background-color: var(--cuboRubikAzul);
 }
 .cuadrado:nth-child(3),
 .cuadrado:nth-child(7){
-    background-color: #d63031;
+    background-color: var(--cuboRubikRojo);
 }
 .cuadrado:nth-child(2),
 .cuadrado:nth-child(9){
-    background-color: #00b894;
+    background-color: var(--cuboRubikVerde);
 }
 .cuadrado:nth-child(4),
 .cuadrado:nth-child(8){
-    background-color: #fdcb6e;
+    background-color: var(--cuboRubikAmarillo);
 }
 .cuadrado:nth-child(5){
-    background-color: #e17055;
+    background-color: var(--cuboRubikNaranja);
 }
 
 .cuadrado:has(p){
@@ -147,13 +122,41 @@
 
 /* #endregion cuboRubikScreen*/
 
+/*! INFO CONTAINER*/
+/* #region informacionPersonal*/
+
 .infoContainer{
     height: 100vh;
     width: 100%;
-    background-color: #112D4E;
+    background-color: var(--colorFondoSecundario);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.infoContainer__content{
+    width: 50%;
+    height: 90vh;
+
+    background-color: var(--colorFondoPrimario);
+    margin: 30px;
+
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px 0px #111; 
+}
+.infoContainer__sideBar{
+    width: 40%;
+    height: 90vh;
+
+    background-color: var(--cuboRubikRojo);
+    margin: 30px;
+
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px 0px #111; 
 }
 
-
+/* #endregion informacionPersonal*/
 
 /*! DISPLAYS EN JAVASCRIPT*/
 /* #region displays&javascript*/
