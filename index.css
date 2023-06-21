@@ -136,7 +136,7 @@
 /* #region informacionPersonal*/
 
 .infoContainer{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--colorFondoSecundario);
 
@@ -161,13 +161,15 @@
     box-shadow: 0px 0px 10px #54d7c6;
     box-shadow: 0px 0px 20px #67cfc1;
 
-    animation: parpadeo 3s infinite;
     transition: none;
 
     border-radius: 30px;
     text-align: center;
     color: var(--fontColor);
 
+}
+.parpadeo{
+    animation: parpadeo 3s infinite;
 }
 .fotoPerfilPrueba{
     width: 200px;
@@ -192,14 +194,17 @@
     /* box-shadow: 4px 4px 10px 0px #111;  */
 }
 
-.infoContainer__sideBar .card{
+.card2{
     font-family: 'Roboto', sans-serif;
 
     width: 90%;
-    height: 10%;
+    height: 30%;
     padding: 10px;
-    /* background-color: #00b894; */
-    background-color: var(--colorFondoPrimario);
+    background-color: var(--colorFondoSecundario);
+    border: 2px solid var(--cyanFuerte);
+    box-shadow: 0px 0px 4px var(--cyanFuerte);
+    box-shadow: 0px 0px 10px #54d7c6;
+    box-shadow: 0px 0px 20px #67cfc1;
 
     display: flex;
     flex-direction: column;
@@ -208,26 +213,28 @@
 
     border-radius: inherit;
 
-    box-shadow: 3px 3px 0px 3px #111; 
-
-
-    transition: .3s ease;
-
     color: var(--fontColor);
+
+}
+.parpadeoLento1{
+    border: 1px solid #aaa;
+    box-shadow: none;
+}
+.parpadeoLento2{
+    animation: parpadeoLento2 2s infinite;
 }
 
-.infoContainer__sideBar .card h2{
-    display: flex;
+
+.infoContainer__sideBar .card2 h2{
     text-align: center;
     font-weight: normal;
 }
-.infoContainer__sideBar .card p{
+.infoContainer__sideBar .card2 p{
     padding: 10px;
     text-align: center;
-    display: none;
 
 }
-.infoContainer__sideBar .card a{
+.infoContainer__sideBar .card2 a{
     text-decoration: none;
     color: var(--fontColor);
 
@@ -235,33 +242,38 @@
 
     padding: 10px 40px;
     border-radius: inherit;
-
-    display: none; 
-
 }
+#botonLuz{
+    background-color: var(--colorFondoSecundario);
+    border: 1px solid var(--cyanFuerte);
+    color: var(--fontColor);
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    padding: 10px 30px;
 
-.infoContainer__sideBar .card:hover{
-    height: 30%;
-
-    box-shadow: 0px 0px 0px 3px var(--cyanFuerte); 
-
+    transition: .2s ease;
 }
-.infoContainer__sideBar .card:hover p,
-.infoContainer__sideBar .card:hover a{
-    display: flex;
-}
-.infoContainer__sideBar .card:hover > h2{
-    color: var(--cyanFuerte);
-    font-weight: bolder;
-}
+#botonLuz:hover{
+    cursor: pointer;
+    background-color: var(--cyanFuerte);
+    color: var(--colorFondoSecundario);
 
+    box-shadow: 0px 0px 4px var(--cyanFuerte);
+    box-shadow: 0px 0px 10px #54d7c6;
+    box-shadow: 0px 0px 20px #67cfc1;
+}
 
 /* #endregion informacionPersonal*/
 
 /*! PROYECTOS CONTAINER*/
 /* #region proyects*/
 
+.proyectsContainer{
+    width: 100%;
+    min-height: 100vh;
 
+    background-color: var(--colorFondoSecundario);
+}
 
 /* #endregion proyects*/
 
@@ -395,5 +407,48 @@
         box-shadow: 0px 0px 20px #67cfc1;
         outline: 1px solid var(--cyanFuerte);
     }
+}
+
+@keyframes parpadeoLento1 {
+    48%{
+        box-shadow: 0px 0px 4px var(--cyanFuerte);
+        box-shadow: 0px 0px 10px #54d7c6;
+        box-shadow: 0px 0px 20px #67cfc1;
+        border: 1px solid var(--cyanFuerte);
+    }
+    50%{
+        box-shadow: none;
+        border: 1px solid #aaa;
+    }
+    60%{
+        box-shadow: none;
+        border: 1px solid #aaa;
+    }
+    70%{
+        box-shadow: 0px 0px 4px var(--cyanFuerte);
+        box-shadow: 0px 0px 10px #54d7c6;
+        box-shadow: 0px 0px 20px #67cfc1;
+        border: 1px solid var(--cyanFuerte);
+    }
+    
+}
+@keyframes parpadeoLento2 {
+    47%{
+        box-shadow: 0px 0px 4px var(--cyanFuerte);
+        box-shadow: 0px 0px 10px #54d7c6;
+        box-shadow: 0px 0px 20px #67cfc1;
+        border: 1px solid var(--cyanFuerte);
+    }
+    50%{
+        box-shadow: none;
+        border: 1px solid #aaa;
+    }
+    52%{
+        box-shadow: 0px 0px 4px var(--cyanFuerte);
+        box-shadow: 0px 0px 10px #54d7c6;
+        box-shadow: 0px 0px 20px #67cfc1;
+        border: 1px solid var(--cyanFuerte);
+    }
+    
 }
 
